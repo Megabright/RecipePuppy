@@ -50,9 +50,15 @@ class ViewController: UIViewController, ServerDelegate, UITableViewDataSource  {
     
     func updateUI () {
         if(recipePuppyResult == nil || recipePuppyResult?.results.count == 0) {
-            lblPage.text = "No results"
-            btnPrevPage.isEnabled = false
-            btnNextPage.isEnabled = false
+            if(recipePuppyQuery.page > 1) {
+                lblPage.text = "End of results"
+                btnPrevPage.isEnabled = true
+                btnNextPage.isEnabled = false
+            } else {
+                lblPage.text = "No results"
+                btnPrevPage.isEnabled = false
+                btnNextPage.isEnabled = false
+            }
         } else {
             lblPage.text = "Page \(String(recipePuppyQuery.page))"
             btnPrevPage.isEnabled = recipePuppyQuery.page > 1

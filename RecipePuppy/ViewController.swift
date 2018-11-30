@@ -44,18 +44,41 @@ class ViewController: UIViewController, ServerDelegate, UITableViewDataSource  {
         
         // Refresh the UI in the main thread
         DispatchQueue.main.async {
-            self.lblPage.text = "Page \(String(self.recipePuppyQuery.page))"
-            self.tblRecipes.reloadData()
+            self.updateUI()
         }
+    }
+    
+    func updateUI () {
+        if(recipePuppyResult == nil || recipePuppyResult?.results.count == 0) {
+            lblPage.text = "No results"
+            btnPrevPage.isEnabled = false
+            btnNextPage.isEnabled = false
+        } else {
+            lblPage.text = "Page \(String(recipePuppyQuery.page))"
+            btnPrevPage.isEnabled = recipePuppyQuery.page > 1
+            btnNextPage.isEnabled = true
+        }
+        tblRecipes.reloadData()
     }
     
     @IBAction func txtSearch_ValueChanged(_ sender: UITextField) {
         
-        // Set the query search text
-        self.recipePuppyQuery.search = sender.text!
         
-        // Send the request with the query to the server
-        server?.sendRequest(params: recipePuppyQuery.toQueryString())
+        if(sender.text == "") {
+            
+            recipePuppyResult = nil
+            updateUI()
+            
+        } else {
+            
+            // Set the query search text
+            recipePuppyQuery.search = sender.text!
+            
+            // Send the request with the query to the server
+            server?.sendRequest(params: recipePuppyQuery.toQueryString())
+        }
+        
+        
         
     }
     

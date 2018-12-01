@@ -32,7 +32,10 @@ class ViewController: UIViewController, ServerDelegate, UITableViewDataSource  {
         // Initialize the server with the API URL
         server = Server(withApiURL: appSettings!["API_URL"] as! String, delegate: self)
         
-        // Show the keyboard when the view loads
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // Show the keyboard when the view appears
         txtSearch.becomeFirstResponder()
     }
 
@@ -106,6 +109,7 @@ class ViewController: UIViewController, ServerDelegate, UITableViewDataSource  {
         return cell
     }
     
+    
     @IBAction func btnPrevPage_Touched(_ sender: UIButton) {
         
         // Decrease the page number in the query
@@ -122,6 +126,17 @@ class ViewController: UIViewController, ServerDelegate, UITableViewDataSource  {
         
         // Send the request with the query to the server
         server?.sendRequest(params: recipePuppyQuery.toQueryString())
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is DetailViewController
+        {
+            let detailViewController  = segue.destination as? DetailViewController
+            
+            // Set the recipe to show in the DetailViewController
+            detailViewController?.recipe = recipePuppyResult?.results[(tblRecipes.indexPathForSelectedRow?.row)!]
+        }
     }
     
     override func didReceiveMemoryWarning() {

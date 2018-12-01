@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD8F856A21B19CEE001897AD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8F856921B19CEE001897AD /* DetailViewController.swift */; };
 		FDBBD57021B04B0800FA7B6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBD56F21B04B0800FA7B6D /* AppDelegate.swift */; };
 		FDBBD57221B04B0800FA7B6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBD57121B04B0800FA7B6D /* ViewController.swift */; };
 		FDBBD57521B04B0800FA7B6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBBD57321B04B0800FA7B6D /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD8F856921B19CEE001897AD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		FDBBD56C21B04B0800FA7B6D /* RecipePuppy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipePuppy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBBD56F21B04B0800FA7B6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDBBD57121B04B0800FA7B6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,8 +93,9 @@
 				FDBBD59221B07D1900FA7B6D /* Model */,
 				FDBBD57321B04B0800FA7B6D /* Main.storyboard */,
 				FDBBD57821B04B0900FA7B6D /* LaunchScreen.storyboard */,
-				FDBBD57121B04B0800FA7B6D /* ViewController.swift */,
 				FDBBD56F21B04B0800FA7B6D /* AppDelegate.swift */,
+				FDBBD57121B04B0800FA7B6D /* ViewController.swift */,
+				FD8F856921B19CEE001897AD /* DetailViewController.swift */,
 				FDBBD57621B04B0900FA7B6D /* Assets.xcassets */,
 				FDBBD57B21B04B0900FA7B6D /* Info.plist */,
 				FDBBD59C21B0B2A200FA7B6D /* AppSettings.strings */,
@@ -235,6 +238,7 @@
 				FDBBD57021B04B0800FA7B6D /* AppDelegate.swift in Sources */,
 				FDBBD59421B07D3100FA7B6D /* RecipePuppy.swift in Sources */,
 				FDBBD5A321B12DA500FA7B6D /* RecipePuppyQuery.swift in Sources */,
+				FD8F856A21B19CEE001897AD /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

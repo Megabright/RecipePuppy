@@ -75,6 +75,7 @@ class ViewController: UIViewController, ServerDelegate, UITableViewDataSource  {
         
         if(sender.text == "") {
             
+            // If the search box is empty show no results
             recipePuppyResult = nil
             updateUI()
             
@@ -101,10 +102,19 @@ class ViewController: UIViewController, ServerDelegate, UITableViewDataSource  {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        // Get the cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellRecipe", for: indexPath)
         
-        // Set the text in the cell to the title of the recipe in the model
-        cell.textLabel?.text = recipePuppyResult?.results[indexPath.row].title
+        // Get the recipe for this cell
+        let recipe: RecipePuppy = (recipePuppyResult?.results[indexPath.row])!
+        
+        // Set the cell title
+        let cellTitle: UILabel = cell.contentView.subviews[0] as! UILabel
+        cellTitle.text = recipe.title
+        
+        // Set the cell image
+        let cellImage: UIImageView = cell.contentView.subviews[1] as! UIImageView
+        cellImage.image = recipe.thumbnailData == nil ? nil : UIImage(data: recipe.thumbnailData!)
         
         return cell
     }
@@ -132,10 +142,10 @@ class ViewController: UIViewController, ServerDelegate, UITableViewDataSource  {
     {
         if segue.destination is DetailViewController
         {
-            let detailViewController  = segue.destination as? DetailViewController
+            let detailViewController  = segue.destination as! DetailViewController
             
             // Set the recipe to show in the DetailViewController
-            detailViewController?.recipe = recipePuppyResult?.results[(tblRecipes.indexPathForSelectedRow?.row)!]
+            detailViewController.recipe = recipePuppyResult?.results[(tblRecipes.indexPathForSelectedRow?.row)!]
         }
     }
     

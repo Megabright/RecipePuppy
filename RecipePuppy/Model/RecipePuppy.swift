@@ -14,6 +14,7 @@ struct RecipePuppy {
     let href: String
     let ingredients: String
     let thumbnail: String
+    let thumbnailData: Data?
 
     init?(fromJson: [String: Any]) {
         guard
@@ -29,5 +30,15 @@ struct RecipePuppy {
         self.href = href
         self.ingredients = ingredients
         self.thumbnail = thumbnail
+        
+        var imageData: Data? = nil
+        if(self.thumbnail != "") {
+            do {
+                imageData = try Data(contentsOf: URL(string: (self.thumbnail))!)
+            } catch {
+                
+            }
+        }
+        self.thumbnailData = imageData
     }
 }

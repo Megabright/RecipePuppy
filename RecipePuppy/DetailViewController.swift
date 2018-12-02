@@ -27,15 +27,10 @@ class DetailViewController: UIViewController  {
     
     func updateUI() {
         if(recipe != nil) {
-            lblTitle.text = recipe?.title
-            lblIngredients.text = "Ingredients: \n" + (recipe?.ingredients.replacingOccurrences(of: ", ", with: "\n"))!
-            if(recipe?.thumbnail != "") {
-                do {
-                    let imageData: Data = try Data(contentsOf: URL(string: (recipe?.thumbnail)!)!)
-                    imgThumbnail.image = UIImage(data: imageData)
-                } catch {
-                }
-            }
+            
+            imgThumbnail.image = recipe!.thumbnailData == nil ? nil : UIImage(data: (recipe!.thumbnailData)!)
+            lblTitle.text = recipe!.title
+            lblIngredients.text = "Ingredients: \n" + (recipe!.ingredients.replacingOccurrences(of: ", ", with: "\n"))
         }
     }
     

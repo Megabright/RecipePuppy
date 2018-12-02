@@ -9,8 +9,10 @@ He querido poner el foco en la arquitectura creando un model de datos para conse
   - Las peticiones HTTP estan encapsuladas en su propio controlador
   
   
-He implementado un requisito opcional:
+He implementado dos requisitos opcionales:
+
   - Paginado
+  - Vista de detalle
   
   
 No he querido ir más allá con los requisitos opcionales por no alargar el proceso. Cosas por hacer:
@@ -19,8 +21,3 @@ No he querido ir más allá con los requisitos opcionales por no alargar el proc
   - Buscar ingredientes
   - Introducir validación de datos
   - Pruebas de unidad
-
-
-Si estáis interesados en que continue implementando más requisitos, por favor hacédmelo saber.
-
-Gracias y un saludo.

@@ -31,7 +31,7 @@ struct RecipePuppyResult {
         self.version = version
         self.href = href
         for result in results {
-            self.results.append(RecipePuppy(fromJson: result as! [String : Any])!)
+            self.results.append(RecipePuppy(fromJson: result as! [String: Any])!)
         }
         
     }

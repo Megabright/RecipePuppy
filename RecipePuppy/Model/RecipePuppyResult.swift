@@ -21,7 +21,7 @@ struct RecipePuppyResult {
             let title = fromJson["title"] as? String,
             let version = fromJson["version"],
             let href = fromJson["href"] as? String,
-            let results = fromJson["results"] as? [Any]
+            let results = fromJson["results"] as? [[String: Any]]
         
         else {
             return nil
@@ -31,7 +31,7 @@ struct RecipePuppyResult {
         self.version = version
         self.href = href
         for result in results {
-            self.results.append(RecipePuppy(fromJson: result as! [String: Any])!)
+            self.results.append(RecipePuppy(fromJson: result)!)
         }
         
     }

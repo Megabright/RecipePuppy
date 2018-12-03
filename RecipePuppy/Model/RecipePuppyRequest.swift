@@ -1,5 +1,5 @@
 //
-//  RecipePuppyQuery.swift
+//  RecipePuppyRequest.swift
 //  RecipePuppy
 //
 //  Created by mnu on 30/11/2018.

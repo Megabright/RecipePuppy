@@ -16,7 +16,7 @@
 		FDBBD57721B04B0900FA7B6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDBBD57621B04B0900FA7B6D /* Assets.xcassets */; };
 		FDBBD57A21B04B0900FA7B6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBBD57821B04B0900FA7B6D /* LaunchScreen.storyboard */; };
 		FDBBD58521B04B0900FA7B6D /* RecipePuppyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBD58421B04B0900FA7B6D /* RecipePuppyUITests.swift */; };
-		FDBBD59121B04C3300FA7B6D /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBD59021B04C3300FA7B6D /* Server.swift */; };
+		FDBBD59121B04C3300FA7B6D /* JsonAPIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBD59021B04C3300FA7B6D /* JsonAPIConnector.swift */; };
 		FDBBD59421B07D3100FA7B6D /* RecipePuppy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBD59321B07D3100FA7B6D /* RecipePuppy.swift */; };
 		FDBBD59D21B0B2A200FA7B6D /* AppSettings.strings in Resources */ = {isa = PBXBuildFile; fileRef = FDBBD59C21B0B2A200FA7B6D /* AppSettings.strings */; };
 		FDBBD5A121B11D3400FA7B6D /* RecipePuppyResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBD5A021B11D3400FA7B6D /* RecipePuppyResult.swift */; };
@@ -51,7 +51,7 @@
 		FDBBD58021B04B0900FA7B6D /* RecipePuppyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipePuppyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBBD58421B04B0900FA7B6D /* RecipePuppyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePuppyUITests.swift; sourceTree = "<group>"; };
 		FDBBD58621B04B0900FA7B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDBBD59021B04C3300FA7B6D /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		FDBBD59021B04C3300FA7B6D /* JsonAPIConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonAPIConnector.swift; sourceTree = "<group>"; };
 		FDBBD59321B07D3100FA7B6D /* RecipePuppy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePuppy.swift; sourceTree = "<group>"; };
 		FDBBD59C21B0B2A200FA7B6D /* AppSettings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = AppSettings.strings; sourceTree = "<group>"; };
 		FDBBD5A021B11D3400FA7B6D /* RecipePuppyResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePuppyResult.swift; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 		FDBBD56E21B04B0800FA7B6D /* RecipePuppy */ = {
 			isa = PBXGroup;
 			children = (
-				FDBBD58F21B04C1500FA7B6D /* Server */,
+				FDBBD58F21B04C1500FA7B6D /* APIConnector */,
 				FDBBD59221B07D1900FA7B6D /* Model */,
 				FDBBD57321B04B0800FA7B6D /* Main.storyboard */,
 				FDBBD57821B04B0900FA7B6D /* LaunchScreen.storyboard */,
@@ -144,12 +144,12 @@
 			path = RecipePuppyUITests;
 			sourceTree = "<group>";
 		};
-		FDBBD58F21B04C1500FA7B6D /* Server */ = {
+		FDBBD58F21B04C1500FA7B6D /* APIConnector */ = {
 			isa = PBXGroup;
 			children = (
-				FDBBD59021B04C3300FA7B6D /* Server.swift */,
+				FDBBD59021B04C3300FA7B6D /* JsonAPIConnector.swift */,
 			);
-			path = Server;
+			path = APIConnector;
 			sourceTree = "<group>";
 		};
 		FDBBD59221B07D1900FA7B6D /* Model */ = {
@@ -324,7 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDBBD59121B04C3300FA7B6D /* Server.swift in Sources */,
+				FDBBD59121B04C3300FA7B6D /* JsonAPIConnector.swift in Sources */,
 				FDBBD57221B04B0800FA7B6D /* ViewController.swift in Sources */,
 				FDBBD5A121B11D3400FA7B6D /* RecipePuppyResult.swift in Sources */,
 				FDBBD57021B04B0800FA7B6D /* AppDelegate.swift in Sources */,

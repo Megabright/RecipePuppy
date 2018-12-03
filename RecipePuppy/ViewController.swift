@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, ServerDelegate, UITableViewDataSource  {
+class ViewController: UIViewController, JsonAPIConnectorDelegate, UITableViewDataSource  {
     
     // Connectors
     @IBOutlet weak var tblRecipes: UITableView!
@@ -18,8 +18,8 @@ class ViewController: UIViewController, ServerDelegate, UITableViewDataSource  {
     @IBOutlet weak var lblPage: UILabel!
     
     // Model
-    var server: Server?
-    var recipePuppyQuery = RecipePuppyRequest(search: "")
+    var api: JsonAPIConnector?
+    var recipePuppyRequest = RecipePuppyRequest(search: "")
     var recipePuppyResult: RecipePuppyResult? = nil
     
     // Functions
@@ -29,8 +29,8 @@ class ViewController: UIViewController, ServerDelegate, UITableViewDataSource  {
         // The API URL is stored AppSettings.strings
         let appSettings = NSDictionary(contentsOfFile: Bundle.main.path(forResource: "AppSettings", ofType: "strings")!)
         
-        // Initialize the server with the API URL
-        server = Server(withApiURL: appSettings!["API_URL"] as! String, delegate: self)
+        // Initialize the API connector with the API URL
+        api = JsonAPIConnector(withApiURL: appSettings!["API_URL"] as! String, delegate: self)
         
     }
     
@@ -39,9 +39,9 @@ class ViewController: UIViewController, ServerDelegate, UITableViewDataSource  {
         txtSearch.becomeFirstResponder()
     }
 
-    func onServerResponse(response: [String: Any]) {
+    func onAPIResponse(response: [String: Any]) {
         
-        // Map the Json response from the server into a RecipePuppyResult class
+        // Map the Json response from the API into a RecipePuppyResult class
         recipePuppyResult = RecipePuppyResult(fromJson: response)
         
         
@@ -53,7 +53,7 @@ class ViewController: UIViewController, ServerDelegate, UITableViewDataSource  {
     
     func updateUI () {
         if(recipePuppyResult == nil || recipePuppyResult?.results.count == 0) {
-            if(recipePuppyQuery.page > 1) {
+            if(recipePuppyRequest.page > 1) {
                 lblPage.text = "End of results"
                 btnPrevPage.isEnabled = true
                 btnNextPage.isEnabled = false
@@ -63,8 +63,8 @@ class ViewController: UIViewController, ServerDelegate, UITableViewDataSource  {
                 btnNextPage.isEnabled = false
             }
         } else {
-            lblPage.text = "Page \(String(recipePuppyQuery.page))"
-            btnPrevPage.isEnabled = recipePuppyQuery.page > 1
+            lblPage.text = "Page \(String(recipePuppyRequest.page))"
+            btnPrevPage.isEnabled = recipePuppyRequest.page > 1
             btnNextPage.isEnabled = true
         }
         tblRecipes.reloadData()
@@ -81,11 +81,11 @@ class ViewController: UIViewController, ServerDelegate, UITableViewDataSource  {
             
         } else {
             
-            // Set the query search text
-            recipePuppyQuery.query = sender.text!
+            // Set the request query text
+            recipePuppyRequest.query = sender.text!
             
-            // Send the request with the query to the server
-            server?.sendRequest(params: recipePuppyQuery.toQueryString())
+            // Send the request to the API
+            api?.sendRequest(params: recipePuppyRequest.toQueryString())
         }
         
         
@@ -122,20 +122,20 @@ class ViewController: UIViewController, ServerDelegate, UITableViewDataSource  {
     
     @IBAction func btnPrevPage_Touched(_ sender: UIButton) {
         
-        // Decrease the page number in the query
-        self.recipePuppyQuery.page -= 1
+        // Decrease the page number in the request
+        self.recipePuppyRequest.page -= 1
         
-        // Send the request with the query to the server
-        server?.sendRequest(params: recipePuppyQuery.toQueryString())
+        // Send the request to the API
+        api?.sendRequest(params: recipePuppyRequest.toQueryString())
     }
     
     @IBAction func btnNextPage_Touched(_ sender: UIButton) {
         
-        // Increase the page number in the query
-        self.recipePuppyQuery.page += 1
+        // Increase the page number in the request
+        self.recipePuppyRequest.page += 1
         
-        // Send the request with the query to the server
-        server?.sendRequest(params: recipePuppyQuery.toQueryString())
+        // Send the request to the API
+        api?.sendRequest(params: recipePuppyRequest.toQueryString())
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)

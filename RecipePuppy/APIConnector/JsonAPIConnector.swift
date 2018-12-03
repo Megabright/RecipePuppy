@@ -1,6 +1,6 @@
 //
-//  BBServer.swift
-//  login
+//  JsonAPIConnector.swift
+//  RecipePuppy
 //
 //  Created by mnu on 21/10/2018.
 //  Copyright © 2018 mundaco.com. All rights reserved.
@@ -32,16 +32,16 @@ extension Dictionary {
     }
 }
 
-protocol ServerDelegate: class {
-    func onServerResponse(response: [String: Any])
+protocol JsonAPIConnectorDelegate: class {
+    func onAPIResponse(response: [String: Any])
 }
 
-class Server: NSObject, URLSessionDelegate {
+class JsonAPIConnector: NSObject, URLSessionDelegate {
     
     var apiURL: String
-    weak var delegate: ServerDelegate?
+    weak var delegate: JsonAPIConnectorDelegate?
     
-    init(withApiURL: String, delegate: ServerDelegate) {
+    init(withApiURL: String, delegate: JsonAPIConnectorDelegate) {
         self.apiURL = withApiURL
         self.delegate = delegate
     }
@@ -62,7 +62,7 @@ class Server: NSObject, URLSessionDelegate {
                 return
             }
             
-            self.delegate?.onServerResponse(response: (content.toJson))
+            self.delegate?.onAPIResponse(response: (content.toJson))
             
         })
         task.resume()

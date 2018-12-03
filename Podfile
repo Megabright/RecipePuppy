@@ -7,7 +7,7 @@ target 'RecipePuppy' do
 
   # Pods for RecipePuppy
   pod 'StringExtensionHTML'
-
+  
   target 'RecipePuppyUITests' do
     inherit! :search_paths
     # Pods for testing

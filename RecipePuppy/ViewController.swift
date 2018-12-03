@@ -72,7 +72,6 @@ class ViewController: UIViewController, JsonAPIConnectorDelegate, UITableViewDat
     
     @IBAction func txtSearch_ValueChanged(_ sender: UITextField) {
         
-        
         if(sender.text == "") {
             
             // If the search box is empty show no results
@@ -87,9 +86,6 @@ class ViewController: UIViewController, JsonAPIConnectorDelegate, UITableViewDat
             // Send the request to the API
             api?.sendRequest(params: recipePuppyRequest.toQueryString())
         }
-        
-        
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

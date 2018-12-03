@@ -47,6 +47,12 @@ class JsonAPIConnector: NSObject, URLSessionDelegate {
     }
     
     public func sendRequest(params: [String: Any]) {
+        sendRequest(params: params, completionHandler: { response in
+            self.delegate?.onAPIResponse(response: response)
+        })
+    }
+    
+    public func sendRequest(params: [String: Any], completionHandler: @escaping ([String: Any]) -> ()) {
         
         let url : URL = URL(string: "\(self.apiURL)?\(params.toQueryString)")!
         
@@ -62,7 +68,7 @@ class JsonAPIConnector: NSObject, URLSessionDelegate {
                 return
             }
             
-            self.delegate?.onAPIResponse(response: (content.toJson))
+            completionHandler(content.toJson)
             
         })
         task.resume()

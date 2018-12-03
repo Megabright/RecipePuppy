@@ -1,0 +1,16 @@
+PODS:
+  - StringExtensionHTML (1.0.2)
+
+DEPENDENCIES:
+  - StringExtensionHTML
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - StringExtensionHTML
+
+SPEC CHECKSUMS:
+  StringExtensionHTML: 856dcc0c705012ae2f9c29c7413b015b82133e52
+
+PODFILE CHECKSUM: f59a291b1f9912e1656d1c4024f051a42b736748
+
+COCOAPODS: 1.5.3

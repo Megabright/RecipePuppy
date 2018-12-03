@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StringExtensionHTML
 
 class DetailViewController: UIViewController  {
 
@@ -29,7 +30,7 @@ class DetailViewController: UIViewController  {
         if(recipe != nil) {
             
             imgThumbnail.image = recipe!.thumbnailData == nil ? nil : UIImage(data: (recipe!.thumbnailData)!)
-            lblTitle.text = recipe!.title
+            lblTitle.text = recipe!.title.stringByDecodingHTMLEntities
             lblIngredients.text = "Ingredients: \n" + (recipe!.ingredients.replacingOccurrences(of: ", ", with: "\n"))
         }
     }

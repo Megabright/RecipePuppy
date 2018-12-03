@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StringExtensionHTML
 
 class ViewController: UIViewController, ServerDelegate, UITableViewDataSource  {
     
@@ -110,7 +111,7 @@ class ViewController: UIViewController, ServerDelegate, UITableViewDataSource  {
         
         // Set the cell title
         let cellTitle: UILabel = cell.contentView.subviews[0] as! UILabel
-        cellTitle.text = recipe.title
+        cellTitle.text = recipe.title.stringByDecodingHTMLEntities
         
         // Set the cell image
         let cellImage: UIImageView = cell.contentView.subviews[1] as! UIImageView

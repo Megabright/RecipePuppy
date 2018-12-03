@@ -20,7 +20,7 @@ class ViewController: UIViewController, ServerDelegate, UITableViewDataSource  {
     
     // Model
     var server: Server?
-    var recipePuppyQuery = RecipePuppyQuery(search: "")
+    var recipePuppyQuery = RecipePuppyRequest(search: "")
     var recipePuppyResult: RecipePuppyResult? = nil
     
     // Functions
@@ -83,7 +83,7 @@ class ViewController: UIViewController, ServerDelegate, UITableViewDataSource  {
         } else {
             
             // Set the query search text
-            recipePuppyQuery.search = sender.text!
+            recipePuppyQuery.query = sender.text!
             
             // Send the request with the query to the server
             server?.sendRequest(params: recipePuppyQuery.toQueryString())
@@ -111,7 +111,7 @@ class ViewController: UIViewController, ServerDelegate, UITableViewDataSource  {
         
         // Set the cell title
         let cellTitle: UILabel = cell.contentView.subviews[0] as! UILabel
-        cellTitle.text = recipe.title.stringByDecodingHTMLEntities
+        cellTitle.text = recipe.title
         
         // Set the cell image
         let cellImage: UIImageView = cell.contentView.subviews[1] as! UIImageView

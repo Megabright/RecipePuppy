@@ -30,7 +30,7 @@ class DetailViewController: UIViewController  {
         if(recipe != nil) {
             
             imgThumbnail.image = recipe!.thumbnailData == nil ? nil : UIImage(data: (recipe!.thumbnailData)!)
-            lblTitle.text = recipe!.title.stringByDecodingHTMLEntities
+            lblTitle.text = recipe!.title
             lblIngredients.text = "Ingredients: \n" + (recipe!.ingredients.replacingOccurrences(of: ", ", with: "\n"))
         }
     }

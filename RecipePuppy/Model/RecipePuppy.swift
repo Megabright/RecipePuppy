@@ -26,7 +26,7 @@ struct RecipePuppy {
                 return nil
         }
         
-        self.title = title
+        self.title = title.stringByDecodingHTMLEntities
         self.href = href
         self.ingredients = ingredients
         self.thumbnail = thumbnail

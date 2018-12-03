@@ -8,20 +8,20 @@
 
 import Foundation
 
-struct RecipePuppyQuery {
+struct RecipePuppyRequest {
     
-    private var _search: String = ""
-    var search: String {
+    private var _query: String = ""
+    var query: String {
         get {
-            return self._search
+            return self._query
         }
         set {
             // Reset page to 1 if the search text is changed
-            if(self._search != newValue) {
+            if(self._query != newValue) {
                 self._page = 1
             }
             
-            self._search = newValue
+            self._query = newValue
         }
     }
     
@@ -39,13 +39,13 @@ struct RecipePuppyQuery {
     
     
     init(search: String, page: Int = 1, ingredients: [String] = []) {
-        self.search = search
+        self.query = search
         self.page = page
         self.ingredients = ingredients
     }
     
     func toQueryString() -> [String: Any] {
-        return ["q": self.search, "p": self.page, "i": self.ingredients.joined(separator: ",")]
+        return ["q": self.query, "p": self.page, "i": self.ingredients.joined(separator: ",")]
         
     }
 }

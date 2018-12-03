@@ -20,7 +20,7 @@
 		FDBBD59421B07D3100FA7B6D /* RecipePuppy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBD59321B07D3100FA7B6D /* RecipePuppy.swift */; };
 		FDBBD59D21B0B2A200FA7B6D /* AppSettings.strings in Resources */ = {isa = PBXBuildFile; fileRef = FDBBD59C21B0B2A200FA7B6D /* AppSettings.strings */; };
 		FDBBD5A121B11D3400FA7B6D /* RecipePuppyResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBD5A021B11D3400FA7B6D /* RecipePuppyResult.swift */; };
-		FDBBD5A321B12DA500FA7B6D /* RecipePuppyQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBD5A221B12DA500FA7B6D /* RecipePuppyQuery.swift */; };
+		FDBBD5A321B12DA500FA7B6D /* RecipePuppyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBD5A221B12DA500FA7B6D /* RecipePuppyRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,7 @@
 		FDBBD59321B07D3100FA7B6D /* RecipePuppy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePuppy.swift; sourceTree = "<group>"; };
 		FDBBD59C21B0B2A200FA7B6D /* AppSettings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = AppSettings.strings; sourceTree = "<group>"; };
 		FDBBD5A021B11D3400FA7B6D /* RecipePuppyResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePuppyResult.swift; sourceTree = "<group>"; };
-		FDBBD5A221B12DA500FA7B6D /* RecipePuppyQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePuppyQuery.swift; sourceTree = "<group>"; };
+		FDBBD5A221B12DA500FA7B6D /* RecipePuppyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePuppyRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +157,7 @@
 			children = (
 				FDBBD59321B07D3100FA7B6D /* RecipePuppy.swift */,
 				FDBBD5A021B11D3400FA7B6D /* RecipePuppyResult.swift */,
-				FDBBD5A221B12DA500FA7B6D /* RecipePuppyQuery.swift */,
+				FDBBD5A221B12DA500FA7B6D /* RecipePuppyRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -268,15 +268,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RecipePuppy/Pods-RecipePuppy-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/StringExtensionHTML/StringExtensionHTML.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StringExtensionHTML.framework",
 			);
@@ -290,15 +286,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-RecipePuppyUITests-checkManifestLockResult.txt",
 			);
@@ -312,15 +304,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-RecipePuppy-checkManifestLockResult.txt",
 			);
@@ -341,7 +329,7 @@
 				FDBBD5A121B11D3400FA7B6D /* RecipePuppyResult.swift in Sources */,
 				FDBBD57021B04B0800FA7B6D /* AppDelegate.swift in Sources */,
 				FDBBD59421B07D3100FA7B6D /* RecipePuppy.swift in Sources */,
-				FDBBD5A321B12DA500FA7B6D /* RecipePuppyQuery.swift in Sources */,
+				FDBBD5A321B12DA500FA7B6D /* RecipePuppyRequest.swift in Sources */,
 				FD8F856A21B19CEE001897AD /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

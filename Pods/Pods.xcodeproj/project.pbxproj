@@ -3,90 +3,94 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1589B3EE6CFE72B8A4EA8B47BEDDC735 /* HTMLString-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 500C90BA1CCB0B9E7BFCB1BA91FCF876 /* HTMLString-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29E20073E685EAA819F3F04B5678919C /* Pods-RecipePuppyUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C25EB0301DDA3492A9106621FAADF315 /* Pods-RecipePuppyUITests-dummy.m */; };
-		2D14C69ED9A7730089037FDBAFD26948 /* Pods-RecipePuppy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 076664C6640ACF231B4834CD5C5C82A9 /* Pods-RecipePuppy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CCBF376E091EECEBA831C6E81B4F9C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		4D64D3015CC905C0C39583BFE8DE010A /* Pods-RecipePuppy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC08A0D5146A8DD1C195AD3FBC44A12 /* Pods-RecipePuppy-dummy.m */; };
+		361DB5F8A7E3EF5B6042D48A53966DD0 /* Mappings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A956F01BBCCA8106AEE4A980A2CCF922 /* Mappings.swift */; };
 		57A382A93C28D7C0BE05B1B4A4542951 /* Pods-RecipePuppyUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE72F45F9EB57987FBCB39A9C1D9C0ED /* Pods-RecipePuppyUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		76343269B52E2BA539EEE069F692355E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		8BE0701D270A484AFBCA85EFD638AA8A /* StringExtensionHTML-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 988728ECD0F21E51BC9464FBF79012B3 /* StringExtensionHTML-dummy.m */; };
-		B3FA045CFB76BCBDE26F93441E72CCE7 /* StringExtensionHTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3803D4E3221DB4F485A9E193BCDA6F /* StringExtensionHTML.swift */; };
-		C15C8D068EB15B60F8656ACAD4D20D25 /* HTMLEntityMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6167887A0C2C28BA8ABD974179B02695 /* HTMLEntityMapping.swift */; };
+		5AA10C99D6D7679C9D1A7335373124C4 /* Pods-RecipePuppy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC08A0D5146A8DD1C195AD3FBC44A12 /* Pods-RecipePuppy-dummy.m */; };
+		60B46C74BD848F50FC4383FA901A33C9 /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAE5F54A9684388B5AD78515B70BE80 /* Deprecated.swift */; };
+		6265D41CE7DF5F620FFF58C03FE37379 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		6D482363D9D0470B3BFF62F339486A91 /* HTMLString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F958456FAE8B5889196A20C1700EA2C6 /* HTMLString.swift */; };
+		70F712C2B1F700B3C1230553F1AA1358 /* NSString+HTMLString.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46FBD9E18D5D33330CEBE366BE85E1E /* NSString+HTMLString.swift */; };
+		98C48D230182590E2125D60C8C6F0F89 /* HTMLString-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D327B3DE6F1F69B98EB7284D8A31628E /* HTMLString-dummy.m */; };
 		CA68ABA4303AC057C82494D18FB89F2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		DCB89CE9FBF4467143CCEEE69F299BA3 /* StringExtensionHTML-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E17572632A9AF94AF8AFD620C37A26CE /* StringExtensionHTML-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5336D6635FB653C65A5892CD03B2B1F /* Pods-RecipePuppy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 076664C6640ACF231B4834CD5C5C82A9 /* Pods-RecipePuppy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E197E26297C5A7933C07440D89E31BC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		177B5A9A90CA61B10DA20740128FB609 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3209FCB119FDC55528078FFB48D7290;
+			remoteInfo = HTMLString;
+		};
 		926D55F5F5A0C1E4685B2A8E59A15775 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A9E4A712A0972D016D6B00B3E935B4AA;
+			remoteGlobalIDString = 23D08C02469D227CCB835D2425455404;
 			remoteInfo = "Pods-RecipePuppy";
-		};
-		A7E4B6A78FC762A8BB1EEB382763D047 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2F955DA67E256126AAE5EDA59B592DFE;
-			remoteInfo = StringExtensionHTML;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		076664C6640ACF231B4834CD5C5C82A9 /* Pods-RecipePuppy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RecipePuppy-umbrella.h"; sourceTree = "<group>"; };
+		164B266E1F95DF2E9DCBC4785BF881ED /* Pods_RecipePuppy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RecipePuppy.framework; path = "Pods-RecipePuppy.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1996BD1DF6D04100E2E2F07A4EAD3877 /* HTMLString.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HTMLString.xcconfig; sourceTree = "<group>"; };
 		1B99408BA99EE368834F593FA0C4625F /* Pods-RecipePuppy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RecipePuppy.release.xcconfig"; sourceTree = "<group>"; };
-		203CB42E691E4AB4D2159C7EDF051270 /* StringExtensionHTML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StringExtensionHTML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20EAA3CFC1F7C1D29569C16CF7E8C0A4 /* Pods-RecipePuppyUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RecipePuppyUITests.modulemap"; sourceTree = "<group>"; };
 		21D5F0EFC18576E933BBC4820D3CE92F /* Pods-RecipePuppyUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RecipePuppyUITests-frameworks.sh"; sourceTree = "<group>"; };
-		2E3803D4E3221DB4F485A9E193BCDA6F /* StringExtensionHTML.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtensionHTML.swift; path = Pod/Classes/StringExtensionHTML.swift; sourceTree = "<group>"; };
 		368061BB8E5F2B881575247F77C24107 /* Pods-RecipePuppy-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RecipePuppy-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3E27885AEF43FA0C821E8E5490F7B813 /* Pods-RecipePuppy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RecipePuppy.debug.xcconfig"; sourceTree = "<group>"; };
 		3EE60F1C719E09313D5C2C2E71F319D0 /* Pods-RecipePuppy-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RecipePuppy-resources.sh"; sourceTree = "<group>"; };
-		49C59BC0D766AD6ED03E97141331F38E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D92388A12D31A0D1330866119430149 /* StringExtensionHTML.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = StringExtensionHTML.modulemap; sourceTree = "<group>"; };
 		4F6153E268723569E0EAF1546A9DF90A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5FBB5A0455B20DC4E48F48A0A334512E /* StringExtensionHTML.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StringExtensionHTML.xcconfig; sourceTree = "<group>"; };
-		6167887A0C2C28BA8ABD974179B02695 /* HTMLEntityMapping.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTMLEntityMapping.swift; path = Pod/Classes/HTMLEntityMapping.swift; sourceTree = "<group>"; };
+		500C90BA1CCB0B9E7BFCB1BA91FCF876 /* HTMLString-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HTMLString-umbrella.h"; sourceTree = "<group>"; };
+		76800A3654C996C96E9577D2D0F6EFBF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A2F54CAE2E54AA87FFF0B4EDE35B96B /* Pods-RecipePuppyUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RecipePuppyUITests-resources.sh"; sourceTree = "<group>"; };
 		7CC08A0D5146A8DD1C195AD3FBC44A12 /* Pods-RecipePuppy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RecipePuppy-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		988728ECD0F21E51BC9464FBF79012B3 /* StringExtensionHTML-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StringExtensionHTML-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FB863DFA006316EAAE150EB0D57F21B /* Pods_RecipePuppyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RecipePuppyUITests.framework; path = "Pods-RecipePuppyUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A092B2352C20210ADDA13171619DC9C7 /* HTMLString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HTMLString.framework; path = HTMLString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A956F01BBCCA8106AEE4A980A2CCF922 /* Mappings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mappings.swift; path = Sources/HTMLString/Mappings.swift; sourceTree = "<group>"; };
 		B9A34C287B6B128895B5F975E033E787 /* Pods-RecipePuppy-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RecipePuppy-acknowledgements.plist"; sourceTree = "<group>"; };
 		C25EB0301DDA3492A9106621FAADF315 /* Pods-RecipePuppyUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RecipePuppyUITests-dummy.m"; sourceTree = "<group>"; };
 		C726D5E3F216096BDAD6A95BBB690D3C /* Pods-RecipePuppy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RecipePuppy.modulemap"; sourceTree = "<group>"; };
 		C933CA475ECC7B46FA817B30C4F8FF0C /* Pods-RecipePuppy-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RecipePuppy-frameworks.sh"; sourceTree = "<group>"; };
+		CDAE5F54A9684388B5AD78515B70BE80 /* Deprecated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecated.swift; path = Sources/HTMLString/Deprecated.swift; sourceTree = "<group>"; };
+		CFEDA05DD69ACBD859FC909FF2A706CB /* HTMLString-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HTMLString-prefix.pch"; sourceTree = "<group>"; };
+		D327B3DE6F1F69B98EB7284D8A31628E /* HTMLString-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HTMLString-dummy.m"; sourceTree = "<group>"; };
 		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DA4B7487FA34D14EDAA835E67E3D24BD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E17572632A9AF94AF8AFD620C37A26CE /* StringExtensionHTML-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StringExtensionHTML-umbrella.h"; sourceTree = "<group>"; };
+		E46FBD9E18D5D33330CEBE366BE85E1E /* NSString+HTMLString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSString+HTMLString.swift"; path = "Sources/HTMLString/NSString+HTMLString.swift"; sourceTree = "<group>"; };
 		E72C73B535EDD8E3F8646E7695689F44 /* Pods-RecipePuppyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RecipePuppyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC63D28ED8C136A5AC757361E1BE43F0 /* Pods-RecipePuppyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RecipePuppyUITests.release.xcconfig"; sourceTree = "<group>"; };
-		ED3765D7A09508CDA96C1B6EBA6D514B /* Pods_RecipePuppy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipePuppy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0F52939A0D48FF2D61ED88704E8A873 /* HTMLString.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HTMLString.modulemap; sourceTree = "<group>"; };
 		F42AB01F124B62DD89C442D13E51F696 /* Pods-RecipePuppyUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RecipePuppyUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		F51728871442E3846A9AB79681FCB09D /* StringExtensionHTML-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StringExtensionHTML-prefix.pch"; sourceTree = "<group>"; };
-		F61F3A40FDE24EC2F9F354F93CE1E482 /* Pods_RecipePuppyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipePuppyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F958456FAE8B5889196A20C1700EA2C6 /* HTMLString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTMLString.swift; path = Sources/HTMLString/HTMLString.swift; sourceTree = "<group>"; };
 		FE72F45F9EB57987FBCB39A9C1D9C0ED /* Pods-RecipePuppyUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RecipePuppyUITests-umbrella.h"; sourceTree = "<group>"; };
 		FFAAA364822138B883A0DD549A9A80DE /* Pods-RecipePuppyUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RecipePuppyUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1BE23258E48ED8DF8C139E116C53EB13 /* Frameworks */ = {
+		35891BB14081ED9EEBBF3D5AA0A9744B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76343269B52E2BA539EEE069F692355E /* Foundation.framework in Frameworks */,
+				E197E26297C5A7933C07440D89E31BC3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7AB8D053FBD9E0A1E2A069E5F6C84FE8 /* Frameworks */ = {
+		6BE11B5ECF9FC52A039E0B3465FAEFA5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CCBF376E091EECEBA831C6E81B4F9C9 /* Foundation.framework in Frameworks */,
+				6265D41CE7DF5F620FFF58C03FE37379 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,12 +123,20 @@
 			path = "Target Support Files/Pods-RecipePuppyUITests";
 			sourceTree = "<group>";
 		};
-		3ABA98F1CEC4626A8370AAA459E94907 /* Products */ = {
+		1C24E59F44817C8B442835C38EEE243A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				ED3765D7A09508CDA96C1B6EBA6D514B /* Pods_RecipePuppy.framework */,
-				F61F3A40FDE24EC2F9F354F93CE1E482 /* Pods_RecipePuppyUITests.framework */,
-				203CB42E691E4AB4D2159C7EDF051270 /* StringExtensionHTML.framework */,
+				7EB7B4511123EC2D61FD8D5A44F66236 /* HTMLString */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		34F458A5F1FA04574346C2D9C802445F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A092B2352C20210ADDA13171619DC9C7 /* HTMLString.framework */,
+				164B266E1F95DF2E9DCBC4785BF881ED /* Pods_RecipePuppy.framework */,
+				9FB863DFA006316EAAE150EB0D57F21B /* Pods_RecipePuppyUITests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,37 +149,28 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		549BB4033EA154B663F17F3B19E0CFF2 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				49C59BC0D766AD6ED03E97141331F38E /* Info.plist */,
-				4D92388A12D31A0D1330866119430149 /* StringExtensionHTML.modulemap */,
-				5FBB5A0455B20DC4E48F48A0A334512E /* StringExtensionHTML.xcconfig */,
-				988728ECD0F21E51BC9464FBF79012B3 /* StringExtensionHTML-dummy.m */,
-				F51728871442E3846A9AB79681FCB09D /* StringExtensionHTML-prefix.pch */,
-				E17572632A9AF94AF8AFD620C37A26CE /* StringExtensionHTML-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/StringExtensionHTML";
-			sourceTree = "<group>";
-		};
-		5BEE9D98A39FFBBC35E0223D67EFD876 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A15273DBAB431EEDF1C2B964B9C21973 /* StringExtensionHTML */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				5BEE9D98A39FFBBC35E0223D67EFD876 /* Pods */,
-				3ABA98F1CEC4626A8370AAA459E94907 /* Products */,
+				1C24E59F44817C8B442835C38EEE243A /* Pods */,
+				34F458A5F1FA04574346C2D9C802445F /* Products */,
 				95697FF6B28128F03CAC6F4CDAB1A03C /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		7EB7B4511123EC2D61FD8D5A44F66236 /* HTMLString */ = {
+			isa = PBXGroup;
+			children = (
+				CDAE5F54A9684388B5AD78515B70BE80 /* Deprecated.swift */,
+				F958456FAE8B5889196A20C1700EA2C6 /* HTMLString.swift */,
+				A956F01BBCCA8106AEE4A980A2CCF922 /* Mappings.swift */,
+				E46FBD9E18D5D33330CEBE366BE85E1E /* NSString+HTMLString.swift */,
+				EA6FFA7E0AC256430E6BED16BE1FD57B /* Support Files */,
+			);
+			name = HTMLString;
+			path = HTMLString;
 			sourceTree = "<group>";
 		};
 		95697FF6B28128F03CAC6F4CDAB1A03C /* Targets Support Files */ = {
@@ -177,16 +180,6 @@
 				08FF56CEAA9F3CD961D412F5EA1426D6 /* Pods-RecipePuppyUITests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		A15273DBAB431EEDF1C2B964B9C21973 /* StringExtensionHTML */ = {
-			isa = PBXGroup;
-			children = (
-				6167887A0C2C28BA8ABD974179B02695 /* HTMLEntityMapping.swift */,
-				2E3803D4E3221DB4F485A9E193BCDA6F /* StringExtensionHTML.swift */,
-				549BB4033EA154B663F17F3B19E0CFF2 /* Support Files */,
-			);
-			path = StringExtensionHTML;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -215,9 +208,31 @@
 			path = "Target Support Files/Pods-RecipePuppy";
 			sourceTree = "<group>";
 		};
+		EA6FFA7E0AC256430E6BED16BE1FD57B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F0F52939A0D48FF2D61ED88704E8A873 /* HTMLString.modulemap */,
+				1996BD1DF6D04100E2E2F07A4EAD3877 /* HTMLString.xcconfig */,
+				D327B3DE6F1F69B98EB7284D8A31628E /* HTMLString-dummy.m */,
+				CFEDA05DD69ACBD859FC909FF2A706CB /* HTMLString-prefix.pch */,
+				500C90BA1CCB0B9E7BFCB1BA91FCF876 /* HTMLString-umbrella.h */,
+				76800A3654C996C96E9577D2D0F6EFBF /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HTMLString";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		9420A9462F7B04E8CC24B7AC847608C4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1589B3EE6CFE72B8A4EA8B47BEDDC735 /* HTMLString-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C2978F571837324297ACE3BCD1F91D75 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -226,41 +241,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C791E60118B82B74DD1F8F98308D8A90 /* Headers */ = {
+		D631FCC71407696B66C8CD56D57E975F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D14C69ED9A7730089037FDBAFD26948 /* Pods-RecipePuppy-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DCC22B8EE1932FD5065495DA27874E72 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DCB89CE9FBF4467143CCEEE69F299BA3 /* StringExtensionHTML-umbrella.h in Headers */,
+				D5336D6635FB653C65A5892CD03B2B1F /* Pods-RecipePuppy-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2F955DA67E256126AAE5EDA59B592DFE /* StringExtensionHTML */ = {
+		23D08C02469D227CCB835D2425455404 /* Pods-RecipePuppy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC4CA60E38F132B04ABAD1C165B9D8C7 /* Build configuration list for PBXNativeTarget "StringExtensionHTML" */;
+			buildConfigurationList = 9299D812439533C750405C270C956187 /* Build configuration list for PBXNativeTarget "Pods-RecipePuppy" */;
 			buildPhases = (
-				DCC22B8EE1932FD5065495DA27874E72 /* Headers */,
-				814E5DF0B0E61715BAC4570EB8AACE81 /* Sources */,
-				7AB8D053FBD9E0A1E2A069E5F6C84FE8 /* Frameworks */,
-				CF76B012F2B7A6EA09B5D9C3AACF322F /* Resources */,
+				D631FCC71407696B66C8CD56D57E975F /* Headers */,
+				A39EE7EC47DCB6028173D4AB5C2524A4 /* Sources */,
+				6BE11B5ECF9FC52A039E0B3465FAEFA5 /* Frameworks */,
+				3B95C7BF3E5AC68B25A67AFE203931D6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1DF97F9BD1CBE7C425C5BB6C61E3120B /* PBXTargetDependency */,
 			);
-			name = StringExtensionHTML;
-			productName = StringExtensionHTML;
-			productReference = 203CB42E691E4AB4D2159C7EDF051270 /* StringExtensionHTML.framework */;
+			name = "Pods-RecipePuppy";
+			productName = "Pods-RecipePuppy";
+			productReference = 164B266E1F95DF2E9DCBC4785BF881ED /* Pods_RecipePuppy.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		70B62F1965CF13AFC61338644CD06225 /* Pods-RecipePuppyUITests */ = {
@@ -279,26 +287,25 @@
 			);
 			name = "Pods-RecipePuppyUITests";
 			productName = "Pods-RecipePuppyUITests";
-			productReference = F61F3A40FDE24EC2F9F354F93CE1E482 /* Pods_RecipePuppyUITests.framework */;
+			productReference = 9FB863DFA006316EAAE150EB0D57F21B /* Pods_RecipePuppyUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A9E4A712A0972D016D6B00B3E935B4AA /* Pods-RecipePuppy */ = {
+		E3209FCB119FDC55528078FFB48D7290 /* HTMLString */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 64B20F7B3E2701A721116425F9B5FC6D /* Build configuration list for PBXNativeTarget "Pods-RecipePuppy" */;
+			buildConfigurationList = E45F27E577ECFE482F6D9088AD1CC910 /* Build configuration list for PBXNativeTarget "HTMLString" */;
 			buildPhases = (
-				C791E60118B82B74DD1F8F98308D8A90 /* Headers */,
-				707DF2C9B195DEDCFFB9A3325C20632A /* Sources */,
-				1BE23258E48ED8DF8C139E116C53EB13 /* Frameworks */,
-				2B7A4983BC2C0186BCB4062A1FB8F4A1 /* Resources */,
+				9420A9462F7B04E8CC24B7AC847608C4 /* Headers */,
+				A682AC24A65F41CB4E56B187DD609D0A /* Sources */,
+				35891BB14081ED9EEBBF3D5AA0A9744B /* Frameworks */,
+				22A1CE4EBAE51D80D7F9BF4AA64D7C2F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F02897332C855B6C69947D3D56D100EA /* PBXTargetDependency */,
 			);
-			name = "Pods-RecipePuppy";
-			productName = "Pods-RecipePuppy";
-			productReference = ED3765D7A09508CDA96C1B6EBA6D514B /* Pods_RecipePuppy.framework */;
+			name = HTMLString;
+			productName = HTMLString;
+			productReference = A092B2352C20210ADDA13171619DC9C7 /* HTMLString.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -318,19 +325,26 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 3ABA98F1CEC4626A8370AAA459E94907 /* Products */;
+			productRefGroup = 34F458A5F1FA04574346C2D9C802445F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A9E4A712A0972D016D6B00B3E935B4AA /* Pods-RecipePuppy */,
+				E3209FCB119FDC55528078FFB48D7290 /* HTMLString */,
+				23D08C02469D227CCB835D2425455404 /* Pods-RecipePuppy */,
 				70B62F1965CF13AFC61338644CD06225 /* Pods-RecipePuppyUITests */,
-				2F955DA67E256126AAE5EDA59B592DFE /* StringExtensionHTML */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2B7A4983BC2C0186BCB4062A1FB8F4A1 /* Resources */ = {
+		22A1CE4EBAE51D80D7F9BF4AA64D7C2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B95C7BF3E5AC68B25A67AFE203931D6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -344,34 +358,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CF76B012F2B7A6EA09B5D9C3AACF322F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		707DF2C9B195DEDCFFB9A3325C20632A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4D64D3015CC905C0C39583BFE8DE010A /* Pods-RecipePuppy-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		814E5DF0B0E61715BAC4570EB8AACE81 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C15C8D068EB15B60F8656ACAD4D20D25 /* HTMLEntityMapping.swift in Sources */,
-				8BE0701D270A484AFBCA85EFD638AA8A /* StringExtensionHTML-dummy.m in Sources */,
-				B3FA045CFB76BCBDE26F93441E72CCE7 /* StringExtensionHTML.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8F00C67139CA83BF22BA36F3BD6669EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -380,58 +369,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A39EE7EC47DCB6028173D4AB5C2524A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AA10C99D6D7679C9D1A7335373124C4 /* Pods-RecipePuppy-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A682AC24A65F41CB4E56B187DD609D0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60B46C74BD848F50FC4383FA901A33C9 /* Deprecated.swift in Sources */,
+				98C48D230182590E2125D60C8C6F0F89 /* HTMLString-dummy.m in Sources */,
+				6D482363D9D0470B3BFF62F339486A91 /* HTMLString.swift in Sources */,
+				361DB5F8A7E3EF5B6042D48A53966DD0 /* Mappings.swift in Sources */,
+				70F712C2B1F700B3C1230553F1AA1358 /* NSString+HTMLString.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1DF97F9BD1CBE7C425C5BB6C61E3120B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HTMLString;
+			target = E3209FCB119FDC55528078FFB48D7290 /* HTMLString */;
+			targetProxy = 177B5A9A90CA61B10DA20740128FB609 /* PBXContainerItemProxy */;
+		};
 		DCE75C808FE21948AF776163F0BC817F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-RecipePuppy";
-			target = A9E4A712A0972D016D6B00B3E935B4AA /* Pods-RecipePuppy */;
+			target = 23D08C02469D227CCB835D2425455404 /* Pods-RecipePuppy */;
 			targetProxy = 926D55F5F5A0C1E4685B2A8E59A15775 /* PBXContainerItemProxy */;
-		};
-		F02897332C855B6C69947D3D56D100EA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = StringExtensionHTML;
-			target = 2F955DA67E256126AAE5EDA59B592DFE /* StringExtensionHTML */;
-			targetProxy = A7E4B6A78FC762A8BB1EEB382763D047 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		097A1AC66C0BD7B74B1F813650F3A83D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E27885AEF43FA0C821E8E5490F7B813 /* Pods-RecipePuppy.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-RecipePuppy/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-RecipePuppy/Pods-RecipePuppy.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		16BC524EDE752B9BB72D7E267116A89A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -498,6 +473,45 @@
 			};
 			name = Debug;
 		};
+		171D499ACFCC64D08F43DF88242BCA33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B99408BA99EE368834F593FA0C4625F /* Pods-RecipePuppy.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RecipePuppy/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RecipePuppy/Pods-RecipePuppy.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		1DF68876DF2AD07A12482477C1AA7DB8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -553,44 +567,10 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		2D988CFB7799C989E8B1B862F3360B62 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B99408BA99EE368834F593FA0C4625F /* Pods-RecipePuppy.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-RecipePuppy/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-RecipePuppy/Pods-RecipePuppy.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -612,7 +592,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-RecipePuppyUITests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-RecipePuppyUITests/Pods-RecipePuppyUITests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -629,9 +613,9 @@
 			};
 			name = Release;
 		};
-		B6F2B8859A745B8B8217C0189DC7F77A /* Release */ = {
+		88BB2246C4DFF1ED60E653360E67D4DF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FBB5A0455B20DC4E48F48A0A334512E /* StringExtensionHTML.xcconfig */;
+			baseConfigurationReference = 1996BD1DF6D04100E2E2F07A4EAD3877 /* HTMLString.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -642,14 +626,53 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/StringExtensionHTML/StringExtensionHTML-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/StringExtensionHTML/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/HTMLString/HTMLString-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HTMLString/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/StringExtensionHTML/StringExtensionHTML.modulemap";
-				PRODUCT_MODULE_NAME = StringExtensionHTML;
-				PRODUCT_NAME = StringExtensionHTML;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/HTMLString/HTMLString.modulemap";
+				PRODUCT_MODULE_NAME = HTMLString;
+				PRODUCT_NAME = HTMLString;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ABE20193B4A0A35A68E5D9246796EAB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1996BD1DF6D04100E2E2F07A4EAD3877 /* HTMLString.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HTMLString/HTMLString-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HTMLString/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/HTMLString/HTMLString.modulemap";
+				PRODUCT_MODULE_NAME = HTMLString;
+				PRODUCT_NAME = HTMLString;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -661,10 +684,12 @@
 			};
 			name = Release;
 		};
-		D109E368FBDCB55A046A977915B99F5C /* Debug */ = {
+		C0FD7DBD3926541E96551CA005C8F752 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FBB5A0455B20DC4E48F48A0A334512E /* StringExtensionHTML.xcconfig */;
+			baseConfigurationReference = 3E27885AEF43FA0C821E8E5490F7B813 /* Pods-RecipePuppy.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -674,18 +699,23 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/StringExtensionHTML/StringExtensionHTML-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/StringExtensionHTML/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-RecipePuppy/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/StringExtensionHTML/StringExtensionHTML.modulemap";
-				PRODUCT_MODULE_NAME = StringExtensionHTML;
-				PRODUCT_NAME = StringExtensionHTML;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RecipePuppy/Pods-RecipePuppy.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -710,7 +740,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-RecipePuppyUITests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-RecipePuppyUITests/Pods-RecipePuppyUITests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -738,20 +772,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		64B20F7B3E2701A721116425F9B5FC6D /* Build configuration list for PBXNativeTarget "Pods-RecipePuppy" */ = {
+		9299D812439533C750405C270C956187 /* Build configuration list for PBXNativeTarget "Pods-RecipePuppy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				097A1AC66C0BD7B74B1F813650F3A83D /* Debug */,
-				2D988CFB7799C989E8B1B862F3360B62 /* Release */,
+				C0FD7DBD3926541E96551CA005C8F752 /* Debug */,
+				171D499ACFCC64D08F43DF88242BCA33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC4CA60E38F132B04ABAD1C165B9D8C7 /* Build configuration list for PBXNativeTarget "StringExtensionHTML" */ = {
+		E45F27E577ECFE482F6D9088AD1CC910 /* Build configuration list for PBXNativeTarget "HTMLString" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D109E368FBDCB55A046A977915B99F5C /* Debug */,
-				B6F2B8859A745B8B8217C0189DC7F77A /* Release */,
+				88BB2246C4DFF1ED60E653360E67D4DF /* Debug */,
+				ABE20193B4A0A35A68E5D9246796EAB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

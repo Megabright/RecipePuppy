@@ -4,21 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-RecipePuppy.xcscheme</key>
+		<key>HTMLString.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>Pods-RecipePuppyUITests.xcscheme</key>
+		<key>Pods-RecipePuppy.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>StringExtensionHTML.xcscheme</key>
+		<key>Pods-RecipePuppyUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

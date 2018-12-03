@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double StringExtensionHTMLVersionNumber;
-FOUNDATION_EXPORT const unsigned char StringExtensionHTMLVersionString[];
+FOUNDATION_EXPORT double HTMLStringVersionNumber;
+FOUNDATION_EXPORT const unsigned char HTMLStringVersionString[];
 

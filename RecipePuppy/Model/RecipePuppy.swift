@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import HTMLString
 
 struct RecipePuppy {
     
@@ -26,7 +27,7 @@ struct RecipePuppy {
                 return nil
         }
         
-        self.title = title.stringByDecodingHTMLEntities
+        self.title = title.removingHTMLEntities
         self.href = href
         self.ingredients = ingredients
         self.thumbnail = thumbnail

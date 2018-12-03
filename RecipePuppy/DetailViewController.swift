@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import StringExtensionHTML
 
 class DetailViewController: UIViewController  {
 

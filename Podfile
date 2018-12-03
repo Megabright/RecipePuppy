@@ -6,7 +6,7 @@ target 'RecipePuppy' do
   use_frameworks!
 
   # Pods for RecipePuppy
-  pod 'StringExtensionHTML'
+  pod 'HTMLString', '~> 4.0'
   
   target 'RecipePuppyUITests' do
     inherit! :search_paths

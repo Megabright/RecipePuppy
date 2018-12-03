@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import HTMLString
 
 struct RecipePuppyRequest {
     
@@ -45,7 +46,7 @@ struct RecipePuppyRequest {
     }
     
     func toQueryString() -> [String: Any] {
-        return ["q": self.query, "p": self.page, "i": self.ingredients.joined(separator: ",")]
+        return ["q": self.query.addingUnicodeEntities, "p": self.page, "i": self.ingredients.joined(separator: ",")]
         
     }
 }

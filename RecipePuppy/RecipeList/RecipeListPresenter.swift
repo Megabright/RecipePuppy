@@ -12,13 +12,13 @@ protocol RecipeListPresenterDelegate {
     func listChanged()
 }
 
-class RecipeListPresenter: JsonAPIConnectorDelegate {
+class RecipeListPresenter: APIClientDelegate {
     
     // MARK: - Delegate
     private var delegate: RecipeListPresenterDelegate
     
     // MARK: - API
-    private var api: JsonAPIConnector?
+    private var api: APIClient?
     
     // MARK: - Model
     private var recipePuppyRequest = RecipePuppyRequest(search: "")
@@ -32,11 +32,8 @@ class RecipeListPresenter: JsonAPIConnectorDelegate {
         
         self.delegate = delegate
         
-        // The API URL is stored AppSettings.strings
-        let appSettings = NSDictionary(contentsOfFile: Bundle.main.path(forResource: "AppSettings", ofType: "strings")!)
-        
-        // Initialize the API connector with the API URL
-        api = JsonAPIConnector(with: appSettings!["API_URL"] as! String, delegate: self)
+        // Initialize the API Client
+        api = APIClient(delegate: self)
     }
     
     func searchRecipe(name: String) {

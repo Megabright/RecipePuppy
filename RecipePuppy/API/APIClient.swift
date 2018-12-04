@@ -1,5 +1,5 @@
 //
-//  JsonAPIConnector.swift
+//  APIClient.swift
 //  RecipePuppy
 //
 //  Created by mnu on 21/10/2018.
@@ -32,17 +32,16 @@ extension Dictionary {
     }
 }
 
-protocol JsonAPIConnectorDelegate: class {
+protocol APIClientDelegate: class {
     func onAPIResponse(response: [String: Any])
 }
 
-class JsonAPIConnector: NSObject, URLSessionDelegate {
+class APIClient: NSObject, URLSessionDelegate {
     
-    var apiURL: String
-    weak var delegate: JsonAPIConnectorDelegate?
+    let apiURL = "http://www.recipepuppy.com/api/"
+    weak var delegate: APIClientDelegate?
     
-    init(with apiURL: String, delegate: JsonAPIConnectorDelegate) {
-        self.apiURL = apiURL
+    init(delegate: APIClientDelegate) {
         self.delegate = delegate
     }
     

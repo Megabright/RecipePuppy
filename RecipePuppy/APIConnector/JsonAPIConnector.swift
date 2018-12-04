@@ -41,8 +41,8 @@ class JsonAPIConnector: NSObject, URLSessionDelegate {
     var apiURL: String
     weak var delegate: JsonAPIConnectorDelegate?
     
-    init(withApiURL: String, delegate: JsonAPIConnectorDelegate) {
-        self.apiURL = withApiURL
+    init(with apiURL: String, delegate: JsonAPIConnectorDelegate) {
+        self.apiURL = apiURL
         self.delegate = delegate
     }
     

@@ -1,5 +1,5 @@
 //
-//  DetailViewController.swift
+//  RecipeDetailViewController.swift
 //  RecipePuppy
 //
 //  Created by mnu on 30/11/2018.
@@ -8,15 +8,15 @@
 
 import UIKit
 
-class DetailViewController: UIViewController  {
+class RecipeDetailViewController: UIViewController  {
 
     // Connectors
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblIngredients: UILabel!
     @IBOutlet weak var imgThumbnail: UIImageView!
     
-    //Model
-    var recipe: RecipePuppy? = nil
+    // Presenter
+    var presenter: RecipeDetailPresenter?
     
     // Functions
     override func viewDidLoad() {
@@ -26,12 +26,10 @@ class DetailViewController: UIViewController  {
     }
     
     func updateUI() {
-        if(recipe != nil) {
-            
-            imgThumbnail.image = recipe!.thumbnailData == nil ? nil : UIImage(data: (recipe!.thumbnailData)!)
-            lblTitle.text = recipe!.title
-            lblIngredients.text = "Ingredients: \n" + (recipe!.ingredients.replacingOccurrences(of: ", ", with: "\n"))
-        }
+        
+        imgThumbnail.image = presenter!.thumbnailData == nil ? nil : UIImage(data: presenter!.thumbnailData!)
+        lblTitle.text = presenter!.title
+        lblIngredients.text = "Ingredients: \n" + (presenter!.ingredients.replacingOccurrences(of: ", ", with: "\n"))
     }
     
     override func didReceiveMemoryWarning() {

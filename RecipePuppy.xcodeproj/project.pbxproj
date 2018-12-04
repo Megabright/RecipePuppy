@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		240B310D6B5F611F0BF64848 /* Pods_RecipePuppy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 957B1C2A8636D4652967222E /* Pods_RecipePuppy.framework */; };
 		27696BAE180A71C3ED496F59 /* Pods_RecipePuppyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAB3EC8039F94FA9410CDCF /* Pods_RecipePuppyUITests.framework */; };
-		FD8F856A21B19CEE001897AD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8F856921B19CEE001897AD /* DetailViewController.swift */; };
+		FD39CCCC21B6078C00FBFB75 /* RecipeListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39CCCB21B6078C00FBFB75 /* RecipeListPresenter.swift */; };
+		FD39CCD021B61C5200FBFB75 /* RecipeDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39CCCF21B61C5200FBFB75 /* RecipeDetailPresenter.swift */; };
+		FD8F856A21B19CEE001897AD /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8F856921B19CEE001897AD /* RecipeDetailViewController.swift */; };
 		FDBBD57021B04B0800FA7B6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBD56F21B04B0800FA7B6D /* AppDelegate.swift */; };
-		FDBBD57221B04B0800FA7B6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBD57121B04B0800FA7B6D /* ViewController.swift */; };
+		FDBBD57221B04B0800FA7B6D /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBD57121B04B0800FA7B6D /* RecipeListViewController.swift */; };
 		FDBBD57521B04B0800FA7B6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBBD57321B04B0800FA7B6D /* Main.storyboard */; };
 		FDBBD57721B04B0900FA7B6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDBBD57621B04B0900FA7B6D /* Assets.xcassets */; };
 		FDBBD57A21B04B0900FA7B6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBBD57821B04B0900FA7B6D /* LaunchScreen.storyboard */; };
@@ -40,10 +42,12 @@
 		C916A35A0F2CFC609DF05DF1 /* Pods-RecipePuppy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipePuppy.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecipePuppy/Pods-RecipePuppy.release.xcconfig"; sourceTree = "<group>"; };
 		D540C3BBCD4847B2EA47AAE6 /* Pods-RecipePuppy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipePuppy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecipePuppy/Pods-RecipePuppy.debug.xcconfig"; sourceTree = "<group>"; };
 		E081359601AA5EBDB9C6D206 /* Pods-RecipePuppyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipePuppyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecipePuppyUITests/Pods-RecipePuppyUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		FD8F856921B19CEE001897AD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FD39CCCB21B6078C00FBFB75 /* RecipeListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListPresenter.swift; sourceTree = "<group>"; };
+		FD39CCCF21B61C5200FBFB75 /* RecipeDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailPresenter.swift; sourceTree = "<group>"; };
+		FD8F856921B19CEE001897AD /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
 		FDBBD56C21B04B0800FA7B6D /* RecipePuppy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipePuppy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBBD56F21B04B0800FA7B6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FDBBD57121B04B0800FA7B6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FDBBD57121B04B0800FA7B6D /* RecipeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewController.swift; sourceTree = "<group>"; };
 		FDBBD57421B04B0800FA7B6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDBBD57621B04B0900FA7B6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDBBD57921B04B0900FA7B6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,6 +102,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FD39CCCD21B61BCC00FBFB75 /* RecipeList */ = {
+			isa = PBXGroup;
+			children = (
+				FDBBD57121B04B0800FA7B6D /* RecipeListViewController.swift */,
+				FD39CCCB21B6078C00FBFB75 /* RecipeListPresenter.swift */,
+			);
+			path = RecipeList;
+			sourceTree = "<group>";
+		};
+		FD39CCCE21B61BDC00FBFB75 /* RecipeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FD8F856921B19CEE001897AD /* RecipeDetailViewController.swift */,
+				FD39CCCF21B61C5200FBFB75 /* RecipeDetailPresenter.swift */,
+			);
+			path = RecipeDetail;
+			sourceTree = "<group>";
+		};
+		FD39CCD121B6225600FBFB75 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FDBBD59C21B0B2A200FA7B6D /* AppSettings.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		FDBBD56321B04B0800FA7B6D = {
 			isa = PBXGroup;
 			children = (
@@ -121,16 +151,16 @@
 		FDBBD56E21B04B0800FA7B6D /* RecipePuppy */ = {
 			isa = PBXGroup;
 			children = (
+				FD39CCD121B6225600FBFB75 /* Resources */,
 				FDBBD58F21B04C1500FA7B6D /* APIConnector */,
 				FDBBD59221B07D1900FA7B6D /* Model */,
+				FD39CCCD21B61BCC00FBFB75 /* RecipeList */,
+				FD39CCCE21B61BDC00FBFB75 /* RecipeDetail */,
+				FDBBD56F21B04B0800FA7B6D /* AppDelegate.swift */,
 				FDBBD57321B04B0800FA7B6D /* Main.storyboard */,
 				FDBBD57821B04B0900FA7B6D /* LaunchScreen.storyboard */,
-				FDBBD56F21B04B0800FA7B6D /* AppDelegate.swift */,
-				FDBBD57121B04B0800FA7B6D /* ViewController.swift */,
-				FD8F856921B19CEE001897AD /* DetailViewController.swift */,
 				FDBBD57621B04B0900FA7B6D /* Assets.xcassets */,
 				FDBBD57B21B04B0900FA7B6D /* Info.plist */,
-				FDBBD59C21B0B2A200FA7B6D /* AppSettings.strings */,
 			);
 			path = RecipePuppy;
 			sourceTree = "<group>";
@@ -325,12 +355,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDBBD59121B04C3300FA7B6D /* JsonAPIConnector.swift in Sources */,
-				FDBBD57221B04B0800FA7B6D /* ViewController.swift in Sources */,
+				FD39CCCC21B6078C00FBFB75 /* RecipeListPresenter.swift in Sources */,
+				FDBBD57221B04B0800FA7B6D /* RecipeListViewController.swift in Sources */,
 				FDBBD5A121B11D3400FA7B6D /* RecipePuppyResult.swift in Sources */,
 				FDBBD57021B04B0800FA7B6D /* AppDelegate.swift in Sources */,
+				FD39CCD021B61C5200FBFB75 /* RecipeDetailPresenter.swift in Sources */,
 				FDBBD59421B07D3100FA7B6D /* RecipePuppy.swift in Sources */,
 				FDBBD5A321B12DA500FA7B6D /* RecipePuppyRequest.swift in Sources */,
-				FD8F856A21B19CEE001897AD /* DetailViewController.swift in Sources */,
+				FD8F856A21B19CEE001897AD /* RecipeDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

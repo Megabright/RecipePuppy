@@ -13,7 +13,7 @@
         <!--Recipe Puppy-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Recipe Puppy" id="BYZ-38-t0r" customClass="ViewController" customModule="RecipePuppy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Recipe Puppy" id="BYZ-38-t0r" customClass="RecipeListViewController" customModule="RecipePuppy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,7 +121,7 @@
         <!--Detail-->
         <scene sceneID="RWG-h4-jTc">
             <objects>
-                <viewController title="Detail" modalPresentationStyle="currentContext" id="wBL-ia-2l8" customClass="DetailViewController" customModule="RecipePuppy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Detail" modalPresentationStyle="currentContext" id="wBL-ia-2l8" customClass="RecipeDetailViewController" customModule="RecipePuppy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Vf-hi-DbI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -10,21 +10,24 @@ import Foundation
 
 protocol RecipeListPresenterDelegate {
     func listChanged()
-    func lastPageReached()
 }
 
 class RecipeListPresenter: JsonAPIConnectorDelegate {
     
-    // Delegate
+    // MARK: - Delegate
     private var delegate: RecipeListPresenterDelegate
     
-    // API
+    // MARK: - API
     private var api: JsonAPIConnector?
     
-    // Model
+    // MARK: - Model
     private var recipePuppyRequest = RecipePuppyRequest(search: "")
     private var recipePuppyResult: RecipePuppyResult? = nil
     
+    // MARK: - Properties
+    var totalPages: Int = Int.max
+    
+    //MARK: - Functions
     init(delegate: RecipeListPresenterDelegate) {
         
         self.delegate = delegate
@@ -83,16 +86,15 @@ class RecipeListPresenter: JsonAPIConnectorDelegate {
         let aux = RecipePuppyResult(fromJson: response)
         if(aux!.results.count == 0) && (recipePuppyRequest.page > 1) {
             recipePuppyRequest.page -= 1
-            DispatchQueue.main.async {
-                self.delegate.lastPageReached()
-            }
+            totalPages = recipePuppyRequest.page
         }
         else {
             recipePuppyResult = aux
-            
-            DispatchQueue.main.async {
-                self.delegate.listChanged()
-            }
+            totalPages = Int.max
+        }
+        
+        DispatchQueue.main.async {
+            self.delegate.listChanged()
         }
     }
     

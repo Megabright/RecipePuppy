@@ -10,7 +10,6 @@ import Foundation
 
 class RecipeDetailPresenter {
     
-    //Model
     var recipe: RecipePuppy?
     
     init(with recipe: RecipePuppy) {

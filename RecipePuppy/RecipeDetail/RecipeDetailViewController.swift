@@ -10,15 +10,15 @@ import UIKit
 
 class RecipeDetailViewController: UIViewController  {
 
-    // Connectors
+    // MARK: - Connectors
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblIngredients: UILabel!
     @IBOutlet weak var imgThumbnail: UIImageView!
     
-    // Presenter
+    // MARK: - Presenter
     var presenter: RecipeDetailPresenter?
     
-    // Functions
+    // MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         

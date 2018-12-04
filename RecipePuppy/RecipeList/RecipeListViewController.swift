@@ -10,17 +10,20 @@ import UIKit
 
 class RecipeListViewController: UIViewController, RecipeListPresenterDelegate, UITableViewDataSource  {
     
-    // Connectors
+    // MARK: - Connectors
     @IBOutlet weak var tblRecipes: UITableView!
     @IBOutlet weak var txtSearch: UITextField!
     @IBOutlet weak var btnPrevPage: UIButton!
     @IBOutlet weak var btnNextPage: UIButton!
     @IBOutlet weak var lblPage: UILabel!
     
-    // Presenter
-    var presenter: RecipeListPresenter?
+    // MARK: - Presenter
+    var presenter: RecipeListPresenter!
     
-    // Functions
+    // MARK: -
+    var timer: Timer!
+    
+    // MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
      
@@ -46,15 +49,20 @@ class RecipeListViewController: UIViewController, RecipeListPresenterDelegate, U
         } else {
             lblPage.text = "Page \(String(presenter!.page))"
             btnPrevPage.isEnabled = presenter!.page > 1
-            btnNextPage.isEnabled = true
+            btnNextPage.isEnabled = presenter!.page < presenter!.totalPages
         }
         tblRecipes.reloadData()
     }
     
     @IBAction func txtSearch_ValueChanged(_ sender: UITextField) {
         
-        presenter!.searchRecipe(name: sender.text!)
-
+        // Wait for the user to stop typing for 1 second before refreshing the presenter
+        if(timer != nil) {
+            timer.invalidate()
+        }
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (timer) in
+            self.presenter!.searchRecipe(name: sender.text!)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -90,10 +98,6 @@ class RecipeListViewController: UIViewController, RecipeListPresenterDelegate, U
     @IBAction func btnNextPage_Touched(_ sender: UIButton) {
         
         presenter!.pageUp()
-    }
-    
-    func lastPageReached() {
-        btnNextPage.isEnabled = false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)

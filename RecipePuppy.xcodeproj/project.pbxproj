@@ -128,10 +128,18 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		FD39CCD221B62CC100FBFB75 /* RecipePuppyTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RecipePuppyTests;
+			sourceTree = "<group>";
+		};
 		FDBBD56321B04B0800FA7B6D = {
 			isa = PBXGroup;
 			children = (
 				FDBBD56E21B04B0800FA7B6D /* RecipePuppy */,
+				FD39CCD221B62CC100FBFB75 /* RecipePuppyTests */,
 				FDBBD58321B04B0900FA7B6D /* RecipePuppyUITests */,
 				FDBBD56D21B04B0800FA7B6D /* Products */,
 				3BBC5676AE922F840C21C208 /* Pods */,
@@ -562,6 +570,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZX8NE2W84G;
 				INFOPLIST_FILE = RecipePuppyUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -582,6 +591,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZX8NE2W84G;
 				INFOPLIST_FILE = RecipePuppyUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

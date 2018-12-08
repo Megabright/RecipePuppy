@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecipeListViewController: UIViewController, RecipeListPresenterDelegate, UITableViewDataSource  {
+class RecipeListViewController: UIViewController, RecipeListPresenterView, UITableViewDataSource  {
     
     // MARK: - Connectors
     @IBOutlet weak var tblRecipes: UITableView!
@@ -26,8 +26,8 @@ class RecipeListViewController: UIViewController, RecipeListPresenterDelegate, U
     // MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-     
-        presenter = RecipeListPresenter(delegate: self)
+        
+        presenter = RecipeListPresenter(view: self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,8 +37,10 @@ class RecipeListViewController: UIViewController, RecipeListPresenterDelegate, U
 
     func listChanged() {
         
-        // Refresh the UI
-        self.updateUI()
+        // Refresh the UI on the main thread
+        DispatchQueue.main.async {
+            self.updateUI()
+        }
     }
     
     func updateUI () {
@@ -49,7 +51,7 @@ class RecipeListViewController: UIViewController, RecipeListPresenterDelegate, U
         } else {
             lblPage.text = "Page \(String(presenter!.page))"
             btnPrevPage.isEnabled = presenter!.page > 1
-            btnNextPage.isEnabled = presenter!.page < presenter!.totalPages
+            btnNextPage.isEnabled = !presenter!.lastPage
         }
         tblRecipes.reloadData()
     }
@@ -61,12 +63,11 @@ class RecipeListViewController: UIViewController, RecipeListPresenterDelegate, U
             timer.invalidate()
         }
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (timer) in
-            self.presenter!.searchRecipe(name: sender.text!)
+            self.presenter!.searchRecipe(text: sender.text!)
         }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return presenter!.recipeCount
     }
     
@@ -76,7 +77,7 @@ class RecipeListViewController: UIViewController, RecipeListPresenterDelegate, U
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellRecipe", for: indexPath)
         
         // Get the recipe for this cell
-        let recipe: RecipePuppy = presenter!.recipe(at: indexPath.row)
+        let recipe: Recipe = presenter!.recipe(at: indexPath.row)!
         
         // Set the cell title
         let cellTitle: UILabel = cell.contentView.subviews[0] as! UILabel
@@ -99,6 +100,7 @@ class RecipeListViewController: UIViewController, RecipeListPresenterDelegate, U
         
         presenter!.pageUp()
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {

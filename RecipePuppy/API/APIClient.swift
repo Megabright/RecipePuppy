@@ -8,19 +8,6 @@
 
 import Foundation
 
-extension Data {
-    var toJson: [String: Any] {
-        var json: [String: Any]
-        do {
-            json = try (JSONSerialization.jsonObject(with: self, options:JSONSerialization.ReadingOptions.mutableContainers)) as! [String: Any]
-        } catch {
-            return [:]
-        }
-        
-        return json
-    }
-}
-
 extension Dictionary {
     var toQueryString: String {
         var output: String = ""
@@ -33,7 +20,7 @@ extension Dictionary {
 }
 
 protocol APIClientDelegate: class {
-    func onAPIResponse(response: [String: Any])
+    func onAPIResponse(response: Any)
 }
 
 class APIClient: NSObject, URLSessionDelegate {
@@ -45,13 +32,7 @@ class APIClient: NSObject, URLSessionDelegate {
         self.delegate = delegate
     }
     
-    public func sendRequest(params: [String: Any]) {
-        sendRequest(params: params, completionHandler: { response in
-            self.delegate?.onAPIResponse(response: response)
-        })
-    }
-    
-    public func sendRequest(params: [String: Any], completionHandler: @escaping ([String: Any]) -> ()) {
+    public func sendRequest<T: Codable>(_ dump: T.Type, params: [String: Any], completionHandler: ((T) -> ())? = nil) {
         
         let url : URL = URL(string: "\(self.apiURL)?\(params.toQueryString)")!
         
@@ -67,7 +48,21 @@ class APIClient: NSObject, URLSessionDelegate {
                 return
             }
             
-            completionHandler(content.toJson)
+            do {
+                //Decode retrived data with JSONDecoder and assing type of Article object
+                let decoded = try JSONDecoder().decode(T.self, from: content)
+                if(completionHandler != nil) {
+                    completionHandler!(decoded)
+                }
+                else {
+                    self.delegate?.onAPIResponse(response: decoded)
+                }
+                
+            } catch let jsonError {
+                print(jsonError)
+            }
+            
+            
             
         })
         task.resume()

@@ -10,14 +10,14 @@ import Foundation
 
 class RecipeDetailPresenter {
     
-    var recipe: RecipePuppy?
+    var recipe: Recipe?
     
-    init(with recipe: RecipePuppy) {
+    init(with recipe: Recipe) {
         self.recipe = recipe
     }
     
     var title: String {
-        return recipe!.title
+        return recipe!.title!
     }
     
     var thumbnailData: Data? {
@@ -25,6 +25,6 @@ class RecipeDetailPresenter {
     }
     
     var ingredients: String {
-        return recipe!.ingredients
+        return recipe!.ingredients!
     }
 }

@@ -1,10 +1,16 @@
 
-Este es el resultado de la prueba RecipePuppy.
 
+This is an iOS app to query the RecipePuppy API.
 
-He querido poner el foco en la arquitectura creando un modelo MVP.
+The arquitecture implemented uses MVP (Model - View - Presenter) as design pattern.
 
-Requisitos opcionales implementados:
+The presenters have been developed with TDD (Test Driven Developement)
 
-  - Paginado
-  - Vista de detalle
+The API is accessed using a RESTful connector.
+
+Features:
+
+    - Paging
+    - Detail View
+    - Unit Tests
+  

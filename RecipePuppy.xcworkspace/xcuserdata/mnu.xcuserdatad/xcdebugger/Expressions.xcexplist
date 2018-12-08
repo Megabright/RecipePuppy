@@ -3,10 +3,42 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "RecipeListPresenter.init(delegate:):RecipeListPresenter.swift">
+         contextName = "closure #1 in Flow.routeResults(search:):Flow.swift">
          <PersistentStrings>
             <PersistentString
-               value = "appSettings![&quot;API_URL&quot;] as! String">
+               value = "search">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RecipeDetailViewController.updateUI():RecipeDetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "presenter">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Flow.onAPIResponse(response:):Flow.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "lastPage">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RecipeListPresenter.searchRecipe(name:):RecipeListPresenter.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "api!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Flow.searchRecipe(text:):Flow.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "page">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

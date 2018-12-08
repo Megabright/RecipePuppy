@@ -3,17 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		240B310D6B5F611F0BF64848 /* Pods_RecipePuppy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 957B1C2A8636D4652967222E /* Pods_RecipePuppy.framework */; };
 		27696BAE180A71C3ED496F59 /* Pods_RecipePuppyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAB3EC8039F94FA9410CDCF /* Pods_RecipePuppyUITests.framework */; };
-		FD39CCCC21B6078C00FBFB75 /* RecipeListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39CCCB21B6078C00FBFB75 /* RecipeListPresenter.swift */; };
 		FD39CCD021B61C5200FBFB75 /* RecipeDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39CCCF21B61C5200FBFB75 /* RecipeDetailPresenter.swift */; };
+		FD68DDE421B6D73900157610 /* RecipeListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD68DDE321B6D73900157610 /* RecipeListPresenterTests.swift */; };
 		FD8F856A21B19CEE001897AD /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8F856921B19CEE001897AD /* RecipeDetailViewController.swift */; };
+		FD97562B21BA66FD0067B0AD /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD97562A21BA66FD0067B0AD /* RecipeListViewController.swift */; };
+		FD97563221BBCB700067B0AD /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD97563121BBCB700067B0AD /* RecipeList.swift */; };
+		FD97563421BBCBA50067B0AD /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD97563321BBCBA50067B0AD /* Recipe.swift */; };
 		FDBBD57021B04B0800FA7B6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBD56F21B04B0800FA7B6D /* AppDelegate.swift */; };
-		FDBBD57221B04B0800FA7B6D /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBD57121B04B0800FA7B6D /* RecipeListViewController.swift */; };
 		FDBBD57521B04B0800FA7B6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBBD57321B04B0800FA7B6D /* Main.storyboard */; };
 		FDBBD57721B04B0900FA7B6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDBBD57621B04B0900FA7B6D /* Assets.xcassets */; };
 		FDBBD57A21B04B0900FA7B6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBBD57821B04B0900FA7B6D /* LaunchScreen.storyboard */; };
@@ -22,9 +24,17 @@
 		FDBBD59421B07D3100FA7B6D /* RecipePuppy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBD59321B07D3100FA7B6D /* RecipePuppy.swift */; };
 		FDBBD5A121B11D3400FA7B6D /* RecipePuppyResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBD5A021B11D3400FA7B6D /* RecipePuppyResult.swift */; };
 		FDBBD5A321B12DA500FA7B6D /* RecipePuppyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBD5A221B12DA500FA7B6D /* RecipePuppyRequest.swift */; };
+		FDFD5BF421B743B4003AB8B6 /* RecipeListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFD5BF321B743B4003AB8B6 /* RecipeListPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FD68DDE621B6D73900157610 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDBBD56421B04B0800FA7B6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDBBD56B21B04B0800FA7B6D;
+			remoteInfo = RecipePuppy;
+		};
 		FDBBD58121B04B0900FA7B6D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FDBBD56421B04B0800FA7B6D /* Project object */;
@@ -41,12 +51,16 @@
 		C916A35A0F2CFC609DF05DF1 /* Pods-RecipePuppy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipePuppy.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecipePuppy/Pods-RecipePuppy.release.xcconfig"; sourceTree = "<group>"; };
 		D540C3BBCD4847B2EA47AAE6 /* Pods-RecipePuppy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipePuppy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecipePuppy/Pods-RecipePuppy.debug.xcconfig"; sourceTree = "<group>"; };
 		E081359601AA5EBDB9C6D206 /* Pods-RecipePuppyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipePuppyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecipePuppyUITests/Pods-RecipePuppyUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		FD39CCCB21B6078C00FBFB75 /* RecipeListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListPresenter.swift; sourceTree = "<group>"; };
 		FD39CCCF21B61C5200FBFB75 /* RecipeDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailPresenter.swift; sourceTree = "<group>"; };
+		FD68DDE121B6D73900157610 /* RecipePuppyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipePuppyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD68DDE321B6D73900157610 /* RecipeListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListPresenterTests.swift; sourceTree = "<group>"; };
+		FD68DDE521B6D73900157610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD8F856921B19CEE001897AD /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
+		FD97562A21BA66FD0067B0AD /* RecipeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListViewController.swift; sourceTree = "<group>"; };
+		FD97563121BBCB700067B0AD /* RecipeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
+		FD97563321BBCBA50067B0AD /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		FDBBD56C21B04B0800FA7B6D /* RecipePuppy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipePuppy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBBD56F21B04B0800FA7B6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FDBBD57121B04B0800FA7B6D /* RecipeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewController.swift; sourceTree = "<group>"; };
 		FDBBD57421B04B0800FA7B6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDBBD57621B04B0900FA7B6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDBBD57921B04B0900FA7B6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,9 +72,17 @@
 		FDBBD59321B07D3100FA7B6D /* RecipePuppy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePuppy.swift; sourceTree = "<group>"; };
 		FDBBD5A021B11D3400FA7B6D /* RecipePuppyResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePuppyResult.swift; sourceTree = "<group>"; };
 		FDBBD5A221B12DA500FA7B6D /* RecipePuppyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePuppyRequest.swift; sourceTree = "<group>"; };
+		FDFD5BF321B743B4003AB8B6 /* RecipeListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FD68DDDE21B6D73900157610 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDBBD56921B04B0800FA7B6D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -103,8 +125,8 @@
 		FD39CCCD21B61BCC00FBFB75 /* RecipeList */ = {
 			isa = PBXGroup;
 			children = (
-				FDBBD57121B04B0800FA7B6D /* RecipeListViewController.swift */,
-				FD39CCCB21B6078C00FBFB75 /* RecipeListPresenter.swift */,
+				FD97562A21BA66FD0067B0AD /* RecipeListViewController.swift */,
+				FDFD5BF321B743B4003AB8B6 /* RecipeListPresenter.swift */,
 			);
 			path = RecipeList;
 			sourceTree = "<group>";
@@ -118,18 +140,29 @@
 			path = RecipeDetail;
 			sourceTree = "<group>";
 		};
-		FD39CCD221B62CC100FBFB75 /* RecipePuppyTests */ = {
+		FD68DDE221B6D73900157610 /* RecipePuppyTests */ = {
 			isa = PBXGroup;
 			children = (
+				FD68DDE321B6D73900157610 /* RecipeListPresenterTests.swift */,
+				FD68DDE521B6D73900157610 /* Info.plist */,
 			);
 			path = RecipePuppyTests;
+			sourceTree = "<group>";
+		};
+		FD97563021BBCB580067B0AD /* PresentationModel */ = {
+			isa = PBXGroup;
+			children = (
+				FD97563321BBCBA50067B0AD /* Recipe.swift */,
+				FD97563121BBCB700067B0AD /* RecipeList.swift */,
+			);
+			path = PresentationModel;
 			sourceTree = "<group>";
 		};
 		FDBBD56321B04B0800FA7B6D = {
 			isa = PBXGroup;
 			children = (
 				FDBBD56E21B04B0800FA7B6D /* RecipePuppy */,
-				FD39CCD221B62CC100FBFB75 /* RecipePuppyTests */,
+				FD68DDE221B6D73900157610 /* RecipePuppyTests */,
 				FDBBD58321B04B0900FA7B6D /* RecipePuppyUITests */,
 				FDBBD56D21B04B0800FA7B6D /* Products */,
 				3BBC5676AE922F840C21C208 /* Pods */,
@@ -142,6 +175,7 @@
 			children = (
 				FDBBD56C21B04B0800FA7B6D /* RecipePuppy.app */,
 				FDBBD58021B04B0900FA7B6D /* RecipePuppyUITests.xctest */,
+				FD68DDE121B6D73900157610 /* RecipePuppyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,7 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				FDBBD58F21B04C1500FA7B6D /* API */,
-				FDBBD59221B07D1900FA7B6D /* Model */,
+				FDBBD59221B07D1900FA7B6D /* DataModel */,
+				FD97563021BBCB580067B0AD /* PresentationModel */,
 				FD39CCCD21B61BCC00FBFB75 /* RecipeList */,
 				FD39CCCE21B61BDC00FBFB75 /* RecipeDetail */,
 				FDBBD56F21B04B0800FA7B6D /* AppDelegate.swift */,
@@ -179,19 +214,37 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		FDBBD59221B07D1900FA7B6D /* Model */ = {
+		FDBBD59221B07D1900FA7B6D /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
 				FDBBD59321B07D3100FA7B6D /* RecipePuppy.swift */,
 				FDBBD5A021B11D3400FA7B6D /* RecipePuppyResult.swift */,
 				FDBBD5A221B12DA500FA7B6D /* RecipePuppyRequest.swift */,
 			);
-			path = Model;
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FD68DDE021B6D73900157610 /* RecipePuppyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD68DDE821B6D73900157610 /* Build configuration list for PBXNativeTarget "RecipePuppyTests" */;
+			buildPhases = (
+				FD68DDDD21B6D73900157610 /* Sources */,
+				FD68DDDE21B6D73900157610 /* Frameworks */,
+				FD68DDDF21B6D73900157610 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD68DDE721B6D73900157610 /* PBXTargetDependency */,
+			);
+			name = RecipePuppyTests;
+			productName = RecipePuppyTests;
+			productReference = FD68DDE121B6D73900157610 /* RecipePuppyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FDBBD56B21B04B0800FA7B6D /* RecipePuppy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDBBD58921B04B0900FA7B6D /* Build configuration list for PBXNativeTarget "RecipePuppy" */;
@@ -240,8 +293,14 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = mundaco.com;
 				TargetAttributes = {
+					FD68DDE021B6D73900157610 = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
+						TestTargetID = FDBBD56B21B04B0800FA7B6D;
+					};
 					FDBBD56B21B04B0800FA7B6D = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 					};
 					FDBBD57F21B04B0900FA7B6D = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -250,7 +309,7 @@
 				};
 			};
 			buildConfigurationList = FDBBD56721B04B0800FA7B6D /* Build configuration list for PBXProject "RecipePuppy" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -264,11 +323,19 @@
 			targets = (
 				FDBBD56B21B04B0800FA7B6D /* RecipePuppy */,
 				FDBBD57F21B04B0900FA7B6D /* RecipePuppyUITests */,
+				FD68DDE021B6D73900157610 /* RecipePuppyTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FD68DDDF21B6D73900157610 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDBBD56A21B04B0800FA7B6D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -346,16 +413,26 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FD68DDDD21B6D73900157610 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD68DDE421B6D73900157610 /* RecipeListPresenterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDBBD56821B04B0800FA7B6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FDBBD59121B04C3300FA7B6D /* APIClient.swift in Sources */,
-				FD39CCCC21B6078C00FBFB75 /* RecipeListPresenter.swift in Sources */,
-				FDBBD57221B04B0800FA7B6D /* RecipeListViewController.swift in Sources */,
+				FDFD5BF421B743B4003AB8B6 /* RecipeListPresenter.swift in Sources */,
+				FD97562B21BA66FD0067B0AD /* RecipeListViewController.swift in Sources */,
+				FD97563421BBCBA50067B0AD /* Recipe.swift in Sources */,
 				FDBBD5A121B11D3400FA7B6D /* RecipePuppyResult.swift in Sources */,
 				FDBBD57021B04B0800FA7B6D /* AppDelegate.swift in Sources */,
 				FD39CCD021B61C5200FBFB75 /* RecipeDetailPresenter.swift in Sources */,
+				FD97563221BBCB700067B0AD /* RecipeList.swift in Sources */,
 				FDBBD59421B07D3100FA7B6D /* RecipePuppy.swift in Sources */,
 				FDBBD5A321B12DA500FA7B6D /* RecipePuppyRequest.swift in Sources */,
 				FD8F856A21B19CEE001897AD /* RecipeDetailViewController.swift in Sources */,
@@ -373,6 +450,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FD68DDE721B6D73900157610 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDBBD56B21B04B0800FA7B6D /* RecipePuppy */;
+			targetProxy = FD68DDE621B6D73900157610 /* PBXContainerItemProxy */;
+		};
 		FDBBD58221B04B0900FA7B6D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FDBBD56B21B04B0800FA7B6D /* RecipePuppy */;
@@ -400,6 +482,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FD68DDE921B6D73900157610 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZX8NE2W84G;
+				INFOPLIST_FILE = RecipePuppyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mundaco.RecipePuppyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecipePuppy.app/RecipePuppy";
+			};
+			name = Debug;
+		};
+		FD68DDEA21B6D73900157610 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZX8NE2W84G;
+				INFOPLIST_FILE = RecipePuppyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mundaco.RecipePuppyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecipePuppy.app/RecipePuppy";
+			};
+			name = Release;
+		};
 		FDBBD58721B04B0900FA7B6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -451,7 +573,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -505,7 +627,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -528,7 +650,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mundaco.RecipePuppy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -547,7 +669,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mundaco.RecipePuppy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -567,7 +689,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mundaco.RecipePuppyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = RecipePuppy;
 			};
@@ -588,7 +710,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mundaco.RecipePuppyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = RecipePuppy;
 			};
@@ -597,6 +719,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FD68DDE821B6D73900157610 /* Build configuration list for PBXNativeTarget "RecipePuppyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD68DDE921B6D73900157610 /* Debug */,
+				FD68DDEA21B6D73900157610 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FDBBD56721B04B0800FA7B6D /* Build configuration list for PBXProject "RecipePuppy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

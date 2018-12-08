@@ -1,101 +1,113 @@
 //
-//  RecipeListPresenter.swift
+//  Flow.swift
 //  RecipePuppy
 //
-//  Created by mnu on 04/12/2018.
+//  Created by mnu on 05/12/2018.
 //  Copyright © 2018 mundaco.com. All rights reserved.
 //
 
-import Foundation
-
-protocol RecipeListPresenterDelegate {
+protocol RecipeListPresenterView {
+    
     func listChanged()
 }
 
 class RecipeListPresenter: APIClientDelegate {
     
-    // MARK: - Delegate
-    private var delegate: RecipeListPresenterDelegate
+    private var view: RecipeListPresenterView?
     
     // MARK: - API
     private var api: APIClient?
     
-    // MARK: - Model
-    private var recipePuppyRequest = RecipePuppyRequest(search: "")
-    private var recipePuppyResult: RecipePuppyResult? = nil
+    var request = RecipePuppyRequest(search: "")
+    var recipeList: [Recipe] = []
+    var lastPage: Bool = true
     
-    // MARK: - Properties
-    var totalPages: Int = Int.max
-    
-    //MARK: - Functions
-    init(delegate: RecipeListPresenterDelegate) {
+    init(view: RecipeListPresenterView) {
         
-        self.delegate = delegate
+        self.view = view
         
         // Initialize the API Client
         api = APIClient(delegate: self)
-    }
-    
-    func searchRecipe(name: String) {
         
-        // Set the request query text
-        recipePuppyRequest.query = name
-        
-        // Send the request to the API
-        api!.sendRequest(params: recipePuppyRequest.toQueryString())
-    }
-    
-    var recipeCount: Int {
-        
-        // If the query is empty we return 0 results
-        return recipePuppyRequest.query.count == 0 ? 0 : recipePuppyResult!.results.count
-    }
-    
-    func recipe(at row: Int) -> RecipePuppy {
-        return recipePuppyResult!.results[row]
     }
     
     var page: Int {
-        return recipePuppyRequest.page
+        get {
+            return request.page
+        }
+        set {
+            request.page = newValue
+        }
+    }
+    
+    var search: String {
+        get {
+            return request.query
+        }
+        set {
+            request.query = newValue
+        }
+    }
+    
+    var recipeCount: Int {
+        get {
+            return recipeList.count
+        }
+    }
+    
+    func recipe(at row: Int) -> Recipe? {
+        if(row >= recipeList.count) {
+            return nil
+        } else {
+            return recipeList[row]
+        }
+    }
+    
+    func searchRecipe(text: String) {
+        request.query = text
+        request.page = 1
+        if(text.count == 0) {
+            recipeList = []
+            lastPage = true
+            view!.listChanged()
+        } else {
+            self.api!.sendRequest(RecipePuppyResult.self, params: request.toQueryString())
+        }
     }
     
     func pageUp() {
-        
-        // Increase the page number in the request
-        recipePuppyRequest.page += 1
-        
-        // Send the request to the API
-        api!.sendRequest(params: recipePuppyRequest.toQueryString())
+        if(recipeList.count > 0) {
+            request.page += 1
+            self.api!.sendRequest(RecipePuppyResult.self, params: request.toQueryString())
+        }
     }
     
     func pageDown() {
-        
-        // Decrease the page number in the request
-        recipePuppyRequest.page -= 1
-        
-        // Send the request to the API
-        api!.sendRequest(params: recipePuppyRequest.toQueryString())
+        if(request.page > 1) {
+            request.page -= 1
+            self.api!.sendRequest(RecipePuppyResult.self, params: request.toQueryString())
+        }
     }
+    func onAPIResponse(response: Any) {
     
-    func onAPIResponse(response: [String : Any]) {
-        
-        // If the result is empty and we are not on the first page, we found the last page
-        let aux = RecipePuppyResult(fromJson: response)
-        if(aux!.results.count == 0) && (recipePuppyRequest.page > 1) {
-            recipePuppyRequest.page -= 1
-            totalPages = recipePuppyRequest.page
+        guard let result = response as? RecipePuppyResult else {
+            return
         }
-        else {
-            recipePuppyResult = aux
-            totalPages = Int.max
+        let aux: [Recipe] = .map(recipes: result.results)
+        lastPage = (aux.count == 0)
+        if(lastPage) {
+            if(page > 1) {
+                request.page -= 1
+            } else {
+                recipeList = []
+            }
+        } else {
+            recipeList = aux
         }
-        
-        DispatchQueue.main.async {
-            self.delegate.listChanged()
-        }
+        view!.listChanged()
     }
     
     func getDetailPresenter(for row: Int) -> RecipeDetailPresenter {
-        return RecipeDetailPresenter(with: recipe(at: row))
+        return RecipeDetailPresenter(with: recipe(at: row)!)
     }
 }

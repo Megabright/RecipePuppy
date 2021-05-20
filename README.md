@@ -12,5 +12,4 @@ Features:
 
     - Paging
     - Detail View
-    - Unit Tests
-  
+    - Unit Tests  
